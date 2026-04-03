@@ -1,0 +1,29 @@
+name: cua_hang_app
+description: App quan ly cua hang My Le cho Android.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.1.0          # Kết nối tới file v7.py trên máy tính
+  intl: ^0.18.1          # Định dạng tiền tệ VNĐ (1.000đ)
+  google_fonts: ^5.1.0   # Font chữ đẹp hơn
+  fluttertoast: ^8.2.4   # Hiện thông báo nhanh
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon.png"
