@@ -89,7 +89,7 @@ class SaleScreen extends StatefulWidget {
 }
 
 class _SaleScreenState extends State<SaleScreen> {
-  final String serverUrl = "http://192.168.1.200:5000"; 
+  final String serverUrl = "http://192.168.1.110:5000"; 
 
   final _khachController = TextEditingController();
   final _searchController = TextEditingController();
