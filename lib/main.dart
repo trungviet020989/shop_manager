@@ -510,11 +510,14 @@ class _SaleScreenState extends State<SaleScreen> {
         
         // 1. Ép kiểu an toàn (Tránh lỗi dynamic của Flutter)
         final String tenSP = item['ten']?.toString() ?? "Sản phẩm";
-        final int sl = int.tryParse(item['sl'].toString()) ?? 1;
+        final double sl = double.tryParse(item['sl'].toString()) ?? 1.0; // Sửa int thành double
         final double gia = double.tryParse(item['gia'].toString()) ?? 0;
         
         // 2. Làm phép tính ở ngoài Widget
         final double thanhTien = sl * gia;
+        
+        // Làm sạch đuôi .0 nếu số lượng là số nguyên (ví dụ 10.0 -> 10)
+        String slHienThi = (sl == sl.toInt()) ? sl.toInt().toString() : sl.toString();
 
         return Card(
           margin: const EdgeInsets.symmetric(vertical: 4),
@@ -525,8 +528,7 @@ class _SaleScreenState extends State<SaleScreen> {
             
             // 3. Đưa dữ liệu đã sạch sẽ vào Text
             title: Text(tenSP, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-            subtitle: Text(
-              "✏️ $sl x ${fmt.format(gia)} đ  =  ${fmt.format(thanhTien)} đ",
+            subtitle: Text("✏️ $slHienThi x ${fmt.format(gia)} đ  =  ${fmt.format(thanhTien)} đ",
               style: const TextStyle(color: Colors.blueGrey, fontSize: 13),
             ),
             
