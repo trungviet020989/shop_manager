@@ -89,7 +89,7 @@ class SaleScreen extends StatefulWidget {
 }
 
 class _SaleScreenState extends State<SaleScreen> {
-  final String serverUrl = "http://192.168.1.110:5000"; 
+  final String serverUrl = "http://192.168.1.200:5000"; 
 
   final _khachController = TextEditingController();
   final _searchController = TextEditingController();
@@ -593,7 +593,7 @@ class DebtScreen extends StatefulWidget {
 }
 
 class _DebtScreenState extends State<DebtScreen> {
-  final String serverUrl = "http://192.168.1.110:5000"; // Đảm bảo trùng IP với SaleScreen
+  final String serverUrl = "http://192.168.1.200:5000"; // Đảm bảo trùng IP với SaleScreen
   List allDebts = [];
   List filteredDebts = [];
   bool isLoading = true;
@@ -970,7 +970,7 @@ class ProductScreen extends StatefulWidget {
 }
 
 class _ProductScreenState extends State<ProductScreen> {
-  final String serverUrl = "http://192.168.1.110:5000"; // Đổi IP nếu cần
+  final String serverUrl = "http://192.168.1.200:5000"; // Đổi IP nếu cần
   List allProducts = [];
   List filteredProducts = [];
   bool isLoading = true;
@@ -1286,7 +1286,7 @@ class PrintScreen extends StatefulWidget {
 }
 
 class _PrintScreenState extends State<PrintScreen> {
-  final String serverUrl = "http://192.168.1.110:5000"; // Đổi IP nếu cần
+  final String serverUrl = "http://192.168.1.200:5000"; // Đổi IP nếu cần
   List allProducts = [];
   List printQueue = []; // Bảng chờ in
   bool isLoading = true;
